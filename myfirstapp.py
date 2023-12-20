@@ -26,7 +26,7 @@ elif option=='T n C':
         st.write(pd.DataFrame({
         'Students': ['John', 'Lofa', 'Siti', 'Amy'],
         'Attendance Status': ['yes', 'yes', 'yes', 'no']
-    elif option=='Long Process':
+elif option=='Long Process':
     'Starting a long computation...'
 
     latest_iteration = st.empty()
