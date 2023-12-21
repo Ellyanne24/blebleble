@@ -33,7 +33,7 @@ Y = data.species.copy()
 modeldt= pickle.load(open("IrisPrediction2.h5", "rb")) #rb: read binary
 
 prediction = modeldt.predict(df)
-#prediction_proba = modeldt.predict_proba(df)
+prediction_proba = modeldt.predict_proba(df)
 
 st.subheader('Species categories and their corresponding index number')
 st.write(Y.unique())
@@ -41,5 +41,5 @@ st.write(Y.unique())
 st.subheader('Prediction')
 st.write(prediction)
 
-#st.subheader('Prediction Probability')
-#st.write(prediction_proba)
+st.subheader('Prediction Probability')
+st.write(prediction_proba)
