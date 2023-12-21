@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 from sklearn.naive_bayes import GaussianNB
+import pickle
 
 st.write("# Iris Species Prediction")
 st.write("This app predicts the **Iris flower** species!")
@@ -28,6 +29,8 @@ st.write(df)
 data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1)
 Y = data.species.copy()
+
+modeldt= pickle.load(open("IrisPrediction2.h5", "rb")) #rb: read binary
 
 prediction = modeldt.predict(df)
 #prediction_proba = modeldt.predict_proba(df)
