@@ -27,17 +27,17 @@ st.subheader('User Input parameters')
 st.write(df)
 
 data = sns.load_dataset('iris')
-X = data.drop(['species'],axis=1)
-Y = data.species.copy()
+#X = data.drop(['species'],axis=1)
+#Y = data.species.copy()
 
-modeldt = pickle.load(open("IrisPrediction.h5","rb"))
-prediction = modeldt.predict(df)
+#modeldt = pickle.load(open("IrisPrediction.h5","rb"))
+#prediction = modeldt.predict(df)
 
-st.subheader('Species categories and their corresponding index number')
-st.write(Y.unique())
+#st.subheader('Species categories and their corresponding index number')
+#st.write(Y.unique())
 
-st.subheader('Prediction')
-st.write(prediction)
+#st.subheader('Prediction')
+#st.write(prediction)
 
 #st.subheader('Prediction Probability')
 #st.write(prediction_proba)
