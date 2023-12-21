@@ -25,6 +25,8 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
+modelIrisprediction = pickle.load(open("IrisPrediction.h5", "rb"))
+
 data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1)
 Y = data.species.copy()
