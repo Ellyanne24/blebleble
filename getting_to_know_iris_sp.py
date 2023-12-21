@@ -29,9 +29,6 @@ data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1)
 Y = data.species.copy()
 
-modelTreeIris = DecisionTreeClassifier()
-modelTreeIris.fit(X, Y)
-
 import pickle
 pickle.dump(modeldt, open("IrisPrediction.h5","wb"))
 print("model is saved")
