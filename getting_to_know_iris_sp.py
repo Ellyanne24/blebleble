@@ -34,6 +34,10 @@ Y = data.species.copy()
 modelTreeIris = DecisionTreeClassifier()
 modelTreeIris.fit(X, Y)
 
+import pickle
+pickle.dump(modeldt, open("IrisPrediction.h5","wb"))
+print("model is saved")
+
 prediction = modelTreeIris.predict(df)
 prediction_proba = modelTreeIris.predict_proba(df)
 
