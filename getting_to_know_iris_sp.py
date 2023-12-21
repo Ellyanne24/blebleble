@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 from sklearn.tree import DecisionTreeClassifier
+import pickle
 
 st.write("# Iris Species Prediction")
 st.write("This app predicts the **Iris flower** species!")
