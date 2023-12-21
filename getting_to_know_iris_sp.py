@@ -30,7 +30,7 @@ data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1)
 Y = data.species.copy()
 
-modeldt = pickle.load(open("IrisPrediction.h5","wb"))
+modeldt = pickle.load(open("IrisPrediction.h5","rb"))
 prediction = modeldt.predict(df)
 
 st.subheader('Species categories and their corresponding index number')
