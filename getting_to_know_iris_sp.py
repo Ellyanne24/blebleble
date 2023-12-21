@@ -25,15 +25,15 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
-loaded_model = pickle.load(open("IrisPrediction.h5","wb"))
-prediction = loaded_model.predict(df)
+modeldt = pickle.load(open("IrisPrediction.h5","wb"))
+prediction = modeldt.predict(df)
 
 data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1)
 Y = data.species.copy()
 
 prediction = modelTreeIris.predict(df)
-prediction_proba = modelTreeIris.predict_proba(df)
+#prediction_proba = modelTreeIris.predict_proba(df)
 
 st.subheader('Species categories and their corresponding index number')
 st.write(Y.unique())
@@ -41,5 +41,5 @@ st.write(Y.unique())
 st.subheader('Prediction')
 st.write(prediction)
 
-st.subheader('Prediction Probability')
-st.write(prediction_proba)
+#st.subheader('Prediction Probability')
+#st.write(prediction_proba)
