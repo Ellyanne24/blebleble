@@ -25,13 +25,12 @@ df = user_input_features()
 st.subheader('User Input parameters')
 st.write(df)
 
+loaded_model = pickle.load(open("IrisPrediction.h5","wb"))
+prediction = loaded_model.predict(df)
+
 data = sns.load_dataset('iris')
 X = data.drop(['species'],axis=1)
 Y = data.species.copy()
-
-import pickle
-pickle.dump(modeldt, open("IrisPrediction.h5","wb"))
-print("model is saved")
 
 prediction = modelTreeIris.predict(df)
 prediction_proba = modelTreeIris.predict_proba(df)
